@@ -78,12 +78,12 @@ function printQuote() {
   let htmlString = '';
 
   // Generate HTML string
-  htmlString = '<p class="quote">' + randQuote.quote + '</p';
+  htmlString = '<p class="quote">' + randQuote.quote + '</p>';
   htmlString += '<p class="source">' +  randQuote.source;
-  if (randQuote.citation !== null && randQuote.citation !== "") {
+  if (typeof(randQuote.citation) !== "undefined") {
     htmlString += '<span class="citation">' + randQuote.citation;
   }
-  if (randQuote.year !== null && randQuote.year !== "") {
+  if (typeof(randQuote.year) !== "undefined") {
     htmlString += '</span><span class="year">' + randQuote.year + '</span>';
   }
   htmlString += '</p>';
