@@ -19,6 +19,7 @@ const quotes = [
   {
     quote: "Only those who dare to fail greatly, can ever achieve greatly",
     source: "Robert F. Kennedy",
+    // citation: "Day of Affirmation Speech",
     year: "1966"
   },
   {
@@ -36,14 +37,17 @@ const quotes = [
   {
     quote: "A happy  man  is  too  satisfied  with  the  present  to  think too much about the future.",
     source: "Einstein",
-    citation: "School essay entitled \"My Future Plans\"",
+    citation: "School essay entitled \"My Future Plans\""
+    // year: "1896"
   },
   {
     quote: "I have not failed. I've just found 10,000 ways that won't work.",
-    source: "Thomas Edison",
+    source: "Thomas Edison"
+    /* citation: "Edison: His Life and Inventions",
+    year: "1910" */
   },
 ];
-
+console.log(quotes);
 
 /***
   Create the `getRandomQuote` function to:
@@ -51,8 +55,12 @@ const quotes = [
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
+function getRandomQuote() {
+  var randNum = Math.floor( Math.random() * quotes.length );
+  return quotes[randNum];
+}
 
-
+// console.log( getRandomQuote() ); Make sure its working
 
 /***
   Create the `printQuote` function to:
