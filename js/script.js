@@ -47,10 +47,25 @@ const quotes = [
   },
 ];
 
+// Random number generator
+function randomNum(max) {
+  return Math.floor( Math.random() * max ) + 1;
+}
+
 // Generate a random quote
 function getRandomQuote() {
-  const randNum = Math.floor( Math.random() * quotes.length );
+  const randNum = randomNum(quotes.length) - 1;
   return quotes[randNum];
+}
+
+// Generate a random RGB value
+function randomColor() {
+  let red, green, blue, rgbColor;
+  red = randomNum(256);
+  green = randomNum(256);
+  blue = randomNum(256);
+  rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+  return rgbColor;
 }
 
 // Take a random quote and display it on-screen (in the quote-box div)
@@ -74,6 +89,7 @@ function printQuote() {
   }
   htmlString += '</p>';
 
+  document.body.style.backgroundColor = randomColor();
   document.getElementById("quote-box").innerHTML = htmlString;
 }
 
