@@ -95,3 +95,6 @@ function printQuote() {
 
 // Invokes the "printQuote" function when the "Show anther quote" button is clicked
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+
+// Invokes the "printQuote" function every 30 seconds
+setInterval(printQuote, 30000);
