@@ -80,6 +80,11 @@ body {
   font-style: normal;
 }
 
+.rating:before {
+  content: ", ";
+  font-style: normal;
+}
+
 #loadQuote {
   position: fixed;
   width: 12em;
