@@ -47,7 +47,6 @@ const quotes = [
     year: "1910" */
   },
 ];
-console.log(quotes);
 
 /***
   Create the `getRandomQuote` function to:
@@ -56,11 +55,9 @@ console.log(quotes);
 ***/
 
 function getRandomQuote() {
-  var randNum = Math.floor( Math.random() * quotes.length );
+  const randNum = Math.floor( Math.random() * quotes.length );
   return quotes[randNum];
 }
-
-// console.log( getRandomQuote() ); Make sure its working
 
 /***
   Create the `printQuote` function to:
@@ -75,7 +72,25 @@ function getRandomQuote() {
    - Set the `innerHTML` of the `quote-box` div to the HTML string.
 ***/
 
+function printQuote() {
+  // Set variables
+  const randQuote = getRandomQuote();
+  let htmlString = '';
 
+  // Generate HTML string
+  htmlString = '<p class="quote">' + randQuote.quote + '</p';
+  htmlString += '<p class="source">' +  randQuote.source;
+  if (quote.citation !== null && quote.citation !== "") {
+    htmlString += '<span class="citation">' + randQuote.citation;
+  }
+  if (quote.year !== null && quote.year !== "") {
+    htmlString += '</span><span class="year">' + randQuote.year + '</span>';
+  }
+  htmlString += '</p>';
+
+  // Put string in document
+  document.getElementByClassName("quote-box").innerHTML = htmlString;
+}
 
 
 /***
