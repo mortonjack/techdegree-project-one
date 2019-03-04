@@ -80,16 +80,16 @@ function printQuote() {
   // Generate HTML string
   htmlString = '<p class="quote">' + randQuote.quote + '</p';
   htmlString += '<p class="source">' +  randQuote.source;
-  if (quote.citation !== null && quote.citation !== "") {
+  if (randQuote.citation !== null && randQuote.citation !== "") {
     htmlString += '<span class="citation">' + randQuote.citation;
   }
-  if (quote.year !== null && quote.year !== "") {
+  if (randQuote.year !== null && randQuote.year !== "") {
     htmlString += '</span><span class="year">' + randQuote.year + '</span>';
   }
   htmlString += '</p>';
 
   // Put string in document
-  document.getElementByClassName("quote-box").innerHTML = htmlString;
+  document.getElementById("quote-box").innerHTML = htmlString;
 }
 
 
