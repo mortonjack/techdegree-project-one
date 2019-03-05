@@ -9,7 +9,6 @@ const quotes = [
   {
     quote: "Only those who dare to fail greatly, can ever achieve greatly",
     source: "Robert F. Kennedy",
-    // citation: "Day of Affirmation Speech",
     year: "1966",
     tag: "Failure",
     rating: "9/10"
@@ -40,8 +39,6 @@ const quotes = [
   {
     quote: "I have not failed. I've just found 10,000 ways that won't work.",
     source: "Thomas Edison",
-    /* citation: "Edison: His Life and Inventions",
-    year: "1910" */
     tag: "Failure",
     rating: "8/10"
   },
